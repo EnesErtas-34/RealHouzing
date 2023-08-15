@@ -1,0 +1,24 @@
+﻿@using RealHouzing.Consume.Models.AboutFeatureModels;
+@model AddAboutFeatureViewModel
+@{
+    ViewData["Title"] = "AddAboutFeature";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <br />
+    <label>Başlık</label>
+    <input type="text" class="form-control" asp-for="Title" />
+    <br />
+    <label>Resim</label>
+    <input type="text" class="form-control" asp-for="ImageURL" />
+    <br />
+    <label>Açıklama</label>
+    <input type="text" class="form-control" asp-for="Description" />
+    <br />
+    <label>Özellik</label>
+    <input type="text" class="form-control" asp-for="Features" />
+    <br />
+    <button class="btn btn-info">Yeni Hakkımızda Alanı Ekle</button>
+</form>
+

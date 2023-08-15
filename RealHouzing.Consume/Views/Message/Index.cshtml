@@ -1,0 +1,38 @@
+﻿@using RealHouzing.Consume.Models.MessageModels;
+@model List<MessageListViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Ad</th>
+        <th>Konu</th>
+        <th>Mail</th>
+        <th>Telefon</th>
+        <th>Mesaj</th>
+        <th>Sil</th>
+        
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.MessageID</td>
+            <td>@item.Name</td>
+            <td>@item.Subject</td>
+            <td>@item.Email</td>
+            <td>@item.Phone</td>
+            <td>@item.Content</td>
+            <td><a href="/Message/DeleteMessage/@item.MessageID" class="btn btn-danger">Sil</a></td>
+            
+
+        </tr>
+    }
+</table>
+<br />
+

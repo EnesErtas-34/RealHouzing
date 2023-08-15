@@ -1,0 +1,20 @@
+﻿@using RealHouzing.Consume.Models.FeatureModels;
+@model AddFeatureViewModel
+@{
+    ViewData["Title"] = "AddFeature";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <br />
+    <label>Başlık</label>
+    <input type="text" class="form-control" asp-for="FeatureTitle" />
+    <br />
+    <label>Alt Başlık</label>
+    <input type="text" class="form-control" asp-for="FeatureSubTitle" />
+    <br />
+    <label>Resim</label>
+    <input type="text" class="form-control" asp-for="ImageURL" />
+    <br />
+    <button class="btn btn-info">Yeni Başlık Ekle</button>
+</form>

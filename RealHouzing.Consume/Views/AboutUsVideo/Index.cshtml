@@ -1,0 +1,36 @@
+﻿@using RealHouzing.Consume.Models.AboutUsVideoModels;
+@model List<AboutUsVideoListViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<br />
+
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Başlık</th>
+            <th>Video</th>
+            <th>Açıklama</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.AboutUsVideoID</td>
+                <td>@item.Title</td>
+                <td><a href="@item.VideoURL" target="_blank" >Video Linki  </a> </td>
+                <td>@item.Description</td>
+                <td><a href="/AboutUsVideo/DeleteAboutUsVideo/@item.AboutUsVideoID" class="btn btn-danger">Sil</a></td>
+                <td><a href="/AboutUsVideo/UpdateAboutUsVideo/@item.AboutUsVideoID" class="btn btn-success">Güncelle</a></td>
+
+            </tr>
+        }
+    </table>
+    <br />
+    <a href="/AboutUsVideo/AddAboutUsVideo/" class="btn btn-primary">Yeni Alan Girişi</a>
+

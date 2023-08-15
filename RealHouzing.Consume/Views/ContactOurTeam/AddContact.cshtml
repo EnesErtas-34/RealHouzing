@@ -1,0 +1,21 @@
+﻿@using RealHouzing.Consume.Models.ContactModels;
+@model AddContactViewModel
+@{
+    ViewData["Title"] = "AddContact";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <br />
+    <label>Adres</label>
+    <input type="text" class="form-control" asp-for="Address" />
+    <br />
+    <label>Mail</label>
+    <input type="text" class="form-control" asp-for="Email" />
+    <br />
+    <label>Telefon</label>
+    <input type="text" class="form-control" asp-for="Phone" />
+    <br />
+    <button class="btn btn-info">Yeni İletişim Ekle</button>
+</form>
+

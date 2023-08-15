@@ -1,0 +1,24 @@
+﻿@using RealHouzing.Consume.Models.CoLivingModels;
+@model AddCoLivingViewModel
+@{
+    ViewData["Title"] = "AddCoLiving";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <br />
+    <label>Başlık</label>
+    <input type="text" class="form-control" asp-for="Title" />
+    <br />
+    <label>Resim1</label>
+    <input type="text" class="form-control" asp-for="ImageURL1" />
+    <br />
+    <label>Resim2</label>
+    <input type="text" class="form-control" asp-for="ImageURL2" />
+    <br />
+    <label>Açıklama</label>
+    <input type="text" class="form-control" asp-for="Description" />
+    <br />
+    <button class="btn btn-info">Yeni Yaşam Alanı Ekle</button>
+</form>
+

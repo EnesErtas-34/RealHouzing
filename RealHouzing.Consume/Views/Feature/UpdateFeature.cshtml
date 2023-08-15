@@ -1,0 +1,27 @@
+﻿@using RealHouzing.Consume.Models.FeatureModels;
+@model UpdateFeatureViewModel
+@{
+    ViewData["Title"] = "UpdateFeature";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container">
+
+    <form method="post">
+        <br /><br />
+        <label>Feature ID</label>
+        <input type="text" class="form-control" asp-for="FeatureID" />
+        <br />
+        <label>Başlık</label>
+        <input type="text" class="form-control" asp-for="FeatureTitle" />
+        <br />
+        <label>Alt Başlık</label>
+        <input type="text" class="form-control" asp-for="FeatureSubTitle" />
+        <br />
+        <label>Resim</label>
+        <input type="text" class="form-control" asp-for="ImageURL" />
+        <br />
+        <button class="btn btn-info">Başlığı Güncelle</button>
+    </form>
+</div>
+
+

@@ -1,0 +1,33 @@
+﻿@using RealHouzing.Consume.Models.CoLivingModels;
+@model List<CoLivingListViewModel>
+<section class="w3l-passion-mid-sec home-phny py-5">
+    <div class="container py-md-5 py-3">
+        <div class="container">
+            @foreach (var item in Model)
+            {
+                <div class="row w3l-passion-mid-grids">
+                    <div class="col-lg-6 passion-grid-item-info pe-lg-5 mb-lg-0 mb-5">
+                        <h6 class="title-subw3hny mb-1">Kiralık PG/Ortak Yaşam</h6>
+                        <h3 class="title-w3l mb-4">@item.Title</h3>
+                        <p class="mt-3 pe-lg-5">
+                           @item.Description
+                        </p>
+
+                    </div>
+                    <div class="col-lg-6 w3hny-passion-item">
+                        <div class="row">
+                            <div class="col-6 passion-grid-item-pic">
+                                <img src="@item.ImageURL1" alt="" class="img-fluid radius-image">
+                            </div>
+                            <div class="col-6 passion-grid-item-pic">
+                                <img src="@item.ImageURL2" alt="" class="img-fluid radius-image">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            }
+            
+        </div>
+    </div>
+</section>

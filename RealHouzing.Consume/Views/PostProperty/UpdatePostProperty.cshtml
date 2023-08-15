@@ -1,0 +1,27 @@
+﻿@using RealHouzing.Consume.Models.PostPropertyModels;
+@model UpdatePostPropertyViewModel
+@{
+    ViewData["Title"] = "UpdatePostProperty";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+
+    <form method="post">
+        <br /><br />
+        <label>OurField ID</label>
+        <input type="text" class="form-control" asp-for="PostPropertyID" />
+        <br />
+        <label>Başlık</label>
+        <input type="text" class="form-control" asp-for="Title" />
+        <br />
+        <label>Açıklama</label>
+        <input type="text" class="form-control" asp-for="Description" />
+        <br />
+        <label>Resim</label>
+        <input type="text" class="form-control" asp-for="ImageURL" />
+        <br />
+        <button class="btn btn-info">Mülk Yayınlama Güncelleme</button>
+    </form>
+</div>
+

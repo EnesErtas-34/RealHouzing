@@ -1,0 +1,18 @@
+﻿@using RealHouzing.Consume.Models.OurFieldModels;
+@model AddOurFieldViewModel
+@{
+    ViewData["Title"] = "AddOurField";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <br />
+    <label>Başlık</label>
+    <input type="text" class="form-control" asp-for="Title" />
+    <br />
+    <label>Resim</label>
+    <input type="text" class="form-control" asp-for="ImageURL" />
+    <br />
+    <button class="btn btn-info">Yeni Başlık Ekle</button>
+</form>
+

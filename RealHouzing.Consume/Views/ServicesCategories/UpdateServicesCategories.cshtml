@@ -1,0 +1,27 @@
+﻿@using RealHouzing.Consume.Models.CategoriesModels;
+@model UpdateServicesCategoriesViewModel
+@{
+    ViewData["Title"] = "UpdateServicesCategories";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+
+    <form method="post">
+        <br /><br />
+        <label>ServicesCategories ID</label>
+        <input type="text" class="form-control" asp-for="ServicesCategoriesID" />
+        <br />
+        <label>Ad</label>
+        <input type="text" class="form-control" asp-for="Name" />
+        <br />
+        <label>Açıklama</label>
+        <input type="text" class="form-control" asp-for="Description" />
+        <br />
+        <label>Ikon</label>
+        <input type="text" class="form-control" asp-for="Icon" />
+        <br />
+        <button class="btn btn-info">Kategori Çeşidi Güncelle</button>
+    </form>
+</div>
+

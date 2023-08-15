@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/DefaultLayout.cshtml";
+}
+
+<!doctype html>
+<html lang="en">
+
+<body>
+    
+    @await Component.InvokeAsync("_ContactBanner")
+   
+    <div class="w3l-contact-10 py-5" id="contact">
+        <div class="form-41-mian pt-lg-4 pt-md-3 pb-lg-4">
+            <div class="container">
+                <div class="heading text-center mx-auto">
+                    <h5 class="title-subw3hny text-center">Ekibimizle İletişime Geçin?</h5>
+                    <h3 class="title-w3l">Sorularınız <span class="inn-text">Var mı? </span></h3>
+                </div>
+
+                @await Component.InvokeAsync("_ContactOurTeam")
+
+                @await Html.PartialAsync("SendMessage")
+            </div>
+        </div>
+        
+    </div>
+    @await Component.InvokeAsync("_ContactMap")
+</body>
+
+</html>
+
+

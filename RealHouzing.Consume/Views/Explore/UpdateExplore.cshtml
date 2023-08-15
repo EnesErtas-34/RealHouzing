@@ -1,0 +1,28 @@
+﻿@using RealHouzing.Consume.Models.ExploreModels;
+@model UpdateExploreViewModel
+@{
+    ViewData["Title"] = "UpdateExplore";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+
+    <form method="post">
+        <br /><br />
+        <label>Explore ID</label>
+        <input type="text" class="form-control" asp-for="ExploreID" />
+        <br />
+        <label>Resim</label>
+        <input type="text" class="form-control" asp-for="ImageURL" />
+        <br />
+        <label>Ad</label>
+        <input type="text" class="form-control" asp-for="ExploreName" />
+        <br />
+        <label>Ikon</label>
+        <input type="text" class="form-control" asp-for="Icon" />
+        <br />
+        <button class="btn btn-info">Mülkleri Güncelle</button>
+    </form>
+</div>
+
+

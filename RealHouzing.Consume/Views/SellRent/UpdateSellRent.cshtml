@@ -1,0 +1,30 @@
+﻿@using RealHouzing.Consume.Models.SellRentModels;
+@model UpdateSellRentViewModel
+@{
+    ViewData["Title"] = "UpdateSellRent";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+
+    <form method="post">
+        <br /><br />
+        <label>SellRent ID</label>
+        <input type="text" class="form-control" asp-for="SellRentID" />
+        <br />
+        <label>Başlık</label>
+        <input type="text" class="form-control" asp-for="Title" />
+        <br />
+        <label>Alt Başlık</label>
+        <input type="text" class="form-control" asp-for="Title2" />
+        <br />
+        <label>Resim</label>
+        <input type="text" class="form-control" asp-for="ImageURL" />
+        <br />
+        <label>Buton Ad</label>
+        <input type="text" class="form-control" asp-for="Button" />
+        <br />
+        <button class="btn btn-info">Sat&Kirala Güncelle</button>
+    </form>
+</div>
+

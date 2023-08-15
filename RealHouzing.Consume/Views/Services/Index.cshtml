@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/DefaultLayout.cshtml";
+}
+
+<!doctype html>
+<html lang="en">
+
+
+<body>
+    @await Component.InvokeAsync("_ServicesBanner")
+  
+    @await Component.InvokeAsync("_ServicesPostProperty")
+ 
+    @await Component.InvokeAsync("_ServicesExplore")
+  
+    @await Component.InvokeAsync("_ServicesCategories")
+
+    @await Component.InvokeAsync("_ServicesPricing")
+   
+</body>
+
+</html>
+
+

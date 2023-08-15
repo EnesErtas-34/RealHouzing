@@ -1,0 +1,35 @@
+﻿@using RealHouzing.Consume.Models.FeatureModels;
+@model List<FeatureListViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<br />
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Başlık</th>
+            <th>Alt Başlık</th>
+            <th>Resim</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.FeatureID</td>
+                <td>@item.FeatureTitle</td>
+                <td>@item.FeatureSubTitle</td>
+                <td>@item.ImageURL</td>
+                <td><a href="/Feature/DeleteFeature/@item.FeatureID" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Feature/UpdateFeature/@item.FeatureID" class="btn btn-success">Güncelle</a></td>
+
+            </tr>
+        }
+    </table>
+    <br />
+    <a href="/Feature/AddFeature/" class="btn btn-primary">Yeni Başlık Girişi</a>
+</div>

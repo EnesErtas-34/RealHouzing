@@ -1,0 +1,30 @@
+﻿@using RealHouzing.Consume.Models.MyTeamModels;
+@model AddMyTeamViewModel
+@{
+    ViewData["Title"] = "AddMyTeam";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <br />
+    <label>Ad Soyad</label>
+    <input type="text" class="form-control" asp-for="NameSurname" />
+    <br />
+    <label>Resim</label>
+    <input type="text" class="form-control" asp-for="ImageURL" />
+    <br />
+    <label>İş</label>
+    <input type="text" class="form-control" asp-for="Job" />
+    <br />
+    <label>Facebook</label>
+    <input type="text" class="form-control" asp-for="Facebook" />
+    <br />
+    <label>Twitter</label>
+    <input type="text" class="form-control" asp-for="Twitter" />
+    <br />
+    <label>Linkedin</label>
+    <input type="text" class="form-control" asp-for="Linkedin" />
+    <br />
+    <button class="btn btn-info">Yeni Takım Ekle</button>
+</form>
+

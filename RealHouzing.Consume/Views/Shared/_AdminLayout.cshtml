@@ -1,0 +1,38 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+@await Component.InvokeAsync("_AdminLayoutHead")
+<body>
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+         data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+
+         @await Component.InvokeAsync("_AdminLayoutNavbar")        
+         @await Component.InvokeAsync("_AdminLayoutSideBar")
+
+        <div class="page-wrapper" style="min-height: 250px;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="white-box">
+                            @RenderBody()
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @await Component.InvokeAsync("_AdminLayoutFooter")
+        </div>
+    </div>
+    @await Component.InvokeAsync("_AdminLayoutScript")
+</body>
+
+</html>

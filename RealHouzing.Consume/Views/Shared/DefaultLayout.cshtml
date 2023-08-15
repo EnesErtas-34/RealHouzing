@@ -1,0 +1,24 @@
+﻿@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+
+@await Component.InvokeAsync("_DefaultHead")
+
+<body>
+    @await Component.InvokeAsync("_DefaultNavbar")
+
+    <div>
+        @RenderBody()
+    </div>
+
+    @await Component.InvokeAsync("_DefaultFooter")
+  
+    @await Component.InvokeAsync("_DefaultScript")
+
+</body>
+
+</html>
+

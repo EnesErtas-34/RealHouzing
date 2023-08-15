@@ -1,0 +1,37 @@
+﻿@using RealHouzing.Consume.Models.BlogModels;
+@model UpdateBlogViewModel
+@{
+    ViewData["Title"] = "UpdateBlog";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<<div class="container">
+
+    <form method="post">
+        <br /><br />
+        <label>Blog ID</label>
+        <input type="text" class="form-control" asp-for="BlogID" />
+        <br />
+        <label>Başlık</label>
+        <input type="text" class="form-control" asp-for="Title" />
+        <br />
+        <label>Yazar</label>
+        <input type="text" class="form-control" asp-for="Writer" />
+        <br />
+        <label>Yazar Resmi</label>
+        <input type="text" class="form-control" asp-for="WriterImage" />
+        <br />
+        <label>Blog Resim</label>
+        <input type="text" class="form-control" asp-for="BlogImage" />
+        <br />
+        <label>Açıklama</label>
+        <input type="text" class="form-control" asp-for="Description" />
+        <br />
+        <label>Tarih</label>
+        <input type="text" class="form-control" asp-for="Date" />
+        <br />
+        <button class="btn btn-info">Blog Güncelle</button>
+    </form>
+</div>
+
+

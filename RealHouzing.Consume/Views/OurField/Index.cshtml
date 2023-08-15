@@ -1,0 +1,34 @@
+﻿@using RealHouzing.Consume.Models.OurFieldModels;
+@model List<OurFieldListViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<br />
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Başlık</th>
+            <th>Resim</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.OurFieldID</td>
+                <td>@item.Title</td>
+                <td> <img src="@item.ImageURL"  style="height:75px;width:75px" /></td>
+                <td><a href="/OurField/DeleteOurField/@item.OurFieldID" class="btn btn-danger">Sil</a></td>
+                <td><a href="/OurField/UpdateOurField/@item.OurFieldID" class="btn btn-success">Güncelle</a></td>
+
+            </tr>
+        }
+    </table>
+    <br />
+    <a href="/OurField/AddOurField/" class="btn btn-primary">Yeni Alan Girişi</a>
+</div>
+

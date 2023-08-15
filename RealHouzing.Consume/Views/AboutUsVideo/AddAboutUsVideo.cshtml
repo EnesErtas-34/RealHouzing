@@ -1,0 +1,21 @@
+﻿@using RealHouzing.Consume.Models.AboutUsVideoModels;
+@model AddAboutUsVideoViewModel
+@{
+    ViewData["Title"] = "AddAboutUsVideo";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <br />
+    <label>Başlık</label>
+    <input type="text" class="form-control" asp-for="Title" />
+    <br />
+    <label>Video</label>
+    <input type="text" class="form-control" asp-for="VideoURL" />
+    <br />
+    <label>Açıklama</label>
+    <input type="text" class="form-control" asp-for="Description" />
+    <br />
+    <button class="btn btn-info">Yeni Video ve Hakkımızda Alanı Ekle</button>
+</form>
+

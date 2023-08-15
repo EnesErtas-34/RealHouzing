@@ -1,0 +1,35 @@
+﻿@using RealHouzing.Consume.Models.CategoriesModels;
+@model List<ServicesCategoriesListViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Ad</th>
+        <th>Ikon</th>
+        <th>Açıklama</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ServicesCategoriesID</td>
+            <td>@item.Name</td>
+            <td>@item.Icon</td>
+            <td><a href="/ServicesCategories/DeleteServicesCategories/@item.ServicesCategoriesID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/ServicesCategories/UpdateServicesCategories/@item.ServicesCategoriesID" class="btn btn-success">Güncelle</a></td>
+
+        </tr>
+    }
+</table>
+<br />
+<a href="/ServicesCategories/AddServicesCategories/" class="btn btn-primary">Yeni Kategori Çeşidi Girişi</a>
+
+

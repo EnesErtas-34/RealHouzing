@@ -1,0 +1,27 @@
+﻿@using RealHouzing.Consume.Models.ProgressBarModels;
+@model AddProgressBarViewModel
+
+@{
+    ViewData["Title"] = "AddProgressBar";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+    <form method="post">
+        <br />
+        <label>Başlık</label>
+        <input type="text" class="form-control" asp-for="Title" />
+        <br />
+        <label>Ad</label>
+        <input type="text" class="form-control" asp-for="Name" />
+        <br />
+        <label>Açıklama</label>
+        <input type="text" class="form-control" asp-for="Description" />
+        <br />
+        <label>Değer</label>
+        <input type="text" class="form-control" asp-for="Value" />
+        <br />
+        <button class="btn btn-info">Yeni Bölüm Ekle</button>
+    </form>
+
+

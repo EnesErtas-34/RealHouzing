@@ -1,0 +1,27 @@
+﻿@using RealHouzing.Consume.Models.ContactModels;
+@model UpdateContactViewModel
+@{
+    ViewData["Title"] = "UpdateContact";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+
+    <form method="post">
+        <br /><br />
+        <label>Contact ID</label>
+        <input type="text" class="form-control" asp-for="ContactID" />
+        <br />
+        <label>Resim</label>
+        <input type="text" class="form-control" asp-for="Address" />
+        <br />
+        <label>Mail</label>
+        <input type="text" class="form-control" asp-for="Email" />
+        <br />
+        <label>Telefon</label>
+        <input type="text" class="form-control" asp-for="Phone" />
+        <br />
+        <button class="btn btn-info">İletişim Güncelle</button>
+    </form>
+</div>
+

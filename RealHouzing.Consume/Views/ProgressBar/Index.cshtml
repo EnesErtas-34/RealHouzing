@@ -1,0 +1,37 @@
+﻿@using RealHouzing.Consume.Models.ProgressBarModels;
+@model List<ProgressBarListViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>Açıklama</th>
+        <th>Ad</th>
+        <th>Değer</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ProgressBarID</td>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td>@item.Name</td>
+            <td>@item.Value</td>
+            <td><a href="/ProgressBar/DeleteProgressBar/@item.ProgressBarID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/ProgressBar/UpdateProgressBar/@item.ProgressBarID" class="btn btn-success">Güncelle</a></td>
+
+        </tr>
+    }
+</table>
+<br />
+<a href="/ProgressBar/AddProgressBar/" class="btn btn-primary">Yeni Bölüm Girişi</a>
+

@@ -1,0 +1,35 @@
+﻿@using RealHouzing.Consume.Models.ServicesPostPropertyModels;
+@model List<ServicesPostPropertyListViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Resim</th>
+        <th>Başlık</th>
+        <th>Açıklama</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ServicesPostPropertyID</td>
+            <td><img src="@item.ImageURL" style="height:75px;width:75px" /></td>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td><a href="/ServicesPostProperty/DeleteServicesPostProperty/@item.ServicesPostPropertyID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/ServicesPostProperty/UpdateServicesPostProperty/@item.ServicesPostPropertyID" class="btn btn-success">Güncelle</a></td>
+
+        </tr>
+    }
+</table>
+<br />
+<a href="/ServicesPostProperty/AddServicesPostProperty/" class="btn btn-primary">Yeni Emlak Yayınlama Girişi</a>
+

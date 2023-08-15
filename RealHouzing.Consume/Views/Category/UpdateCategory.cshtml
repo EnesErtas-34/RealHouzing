@@ -1,0 +1,19 @@
+﻿@using RealHouzing.Consume.Models.CategoryModels;
+@model UpdateCategoryViewModel
+@{
+    ViewData["Title"] = "UpdateCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container">
+
+    <form method="post">
+    <br /><br />
+    <label>Kategori ID</label>
+    <input type="text" class="form-control" asp-for="CategoryID" />
+    <br />
+    <label>Kategori Adı</label>
+    <input type="text" class="form-control" asp-for="CategoryName" />
+    <br />
+    <button class="btn btn-info">Kategoriyi Güncelle</button>
+    </form>
+</div>

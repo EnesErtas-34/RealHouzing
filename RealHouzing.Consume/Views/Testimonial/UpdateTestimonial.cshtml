@@ -1,0 +1,29 @@
+﻿@using RealHouzing.Consume.Models.TestimonialModels;
+@model UpdateTestimonialViewModel
+@{
+    ViewData["Title"] = "UpdateTestimonial";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container">
+
+    <form method="post">
+        <br /><br />
+        <label>Referans ID</label>
+        <input type="text" class="form-control" asp-for="TestimonialID" />
+        <br />
+        <label>Ad Soyad</label>
+        <input type="text" class="form-control" asp-for="NameSurname" />
+        <br />
+        <label>Başlık</label>
+        <input type="text" class="form-control" asp-for="Title" />
+        <br />
+        <label>Yorum</label>
+        <input type="text" class="form-control" asp-for="Comment" />
+        <br />
+        <label>Resim</label>
+        <input type="text" class="form-control" asp-for="ImageURL" />
+        <br />
+        <button class="btn btn-info">Referans Güncelle</button>
+    </form>
+</div>
+

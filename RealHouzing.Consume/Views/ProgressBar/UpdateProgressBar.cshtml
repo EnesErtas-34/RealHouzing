@@ -1,0 +1,30 @@
+﻿@using RealHouzing.Consume.Models.ProgressBarModels;
+@model UpdateProgressBarViewModel
+@{
+    ViewData["Title"] = "UpdateProgressBar";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+
+    <form method="post">
+        <br /><br />
+        <label>ProgressBar ID</label>
+        <input type="text" class="form-control" asp-for="ProgressBarID" />
+        <br />
+        <label>Ad</label>
+        <input type="text" class="form-control" asp-for="Name" />
+        <br />
+        <label>Başlık</label>
+        <input type="text" class="form-control" asp-for="Title" />
+        <br />
+        <label>Açıklama</label>
+        <input type="text" class="form-control" asp-for="Description" />
+        <br />
+        <label>Değer</label>
+        <input type="text" class="form-control" asp-for="Value" />
+        <br />
+        <button class="btn btn-info">Bölüm Güncelle</button>
+    </form>
+</div>
+

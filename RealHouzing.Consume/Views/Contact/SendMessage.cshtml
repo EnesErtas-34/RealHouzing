@@ -1,0 +1,26 @@
+﻿@using RealHouzing.Consume.Models.MessageModels;
+@model AddMessageViewModel
+<div class="form-inner-cont mt-5">
+    <form action="/Contact/SendMessage/" method="post" class="signin-form">
+        <div class="form-grids">
+            <div class="form-input">
+                <input type="text" asp-for="Name" id="w3lName" placeholder="Adınızı Giriniz *" required="" />
+            </div>
+            <div class="form-input">
+                <input type="text" asp-for="Subject" id="w3lSubject" placeholder="Konu Giriniz " required />
+            </div>
+            <div class="form-input">
+                <input type="email" asp-for="Email" id="w3lSender" placeholder="Gmail Giriniz *" required />
+            </div>
+            <div class="form-input">
+                <input type="text" asp-for="Phone" id="w3lPhone" placeholder="Telefon Numaranızı Giriniz *" required />
+            </div>
+        </div>
+        <div class="form-input">
+            <textarea asp-for="Content" id="w3lMessage" placeholder="Sorgunuzu buraya yazın" required=""></textarea>
+        </div>
+        <div class="w3-submit text-right">
+            <button type="submit" class="btn btn-style btn-primary">Mesaj Gönder <i class="fas fa-paper-plane ms-2"></i></button>
+        </div>
+    </form>
+</div>

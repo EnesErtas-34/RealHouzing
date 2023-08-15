@@ -1,0 +1,21 @@
+﻿@using RealHouzing.Consume.Models.CategoriesModels;
+@model AddServicesCategoriesViewModel
+@{
+    ViewData["Title"] = "AddServicesCategories";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <br />
+    <label>Ad</label>
+    <input type="text" class="form-control" asp-for="Name" />
+    <br />
+    <label>Açıklama</label>
+    <input type="text" class="form-control" asp-for="Description" />
+    <br />
+    <label>Ikon</label>
+    <input type="text" class="form-control" asp-for="Icon" />
+    <br />
+    <button class="btn btn-info">Yeni Kategori Çeşidi Ekle</button>
+</form>
+

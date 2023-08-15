@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/DefaultLayout.cshtml";
+}
+
+<!doctype html>
+<html lang="en">
+
+
+
+<body>
+   
+    @await Component.InvokeAsync("_AboutBanner")
+    
+    @await Component.InvokeAsync("_AboutFeature")
+   
+    @await Component.InvokeAsync("_AboutCoLiving")
+    
+    @await Component.InvokeAsync("_AboutProgressBars")
+  
+    @await Component.InvokeAsync("_AboutAskByClient")
+  
+    @await Component.InvokeAsync("_AboutCounter")
+   
+    @await Component.InvokeAsync("_AboutTakeaTour")
+  
+    @await Component.InvokeAsync("_AboutTeam")
+
+</body>
+
+</html>
+

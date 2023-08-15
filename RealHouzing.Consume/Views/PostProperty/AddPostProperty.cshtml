@@ -1,0 +1,21 @@
+﻿@using RealHouzing.Consume.Models.PostPropertyModels;
+@model AddPostPropertyViewModel
+@{
+    ViewData["Title"] = "AddPostProperty";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <br />
+    <label>Başlık</label>
+    <input type="text" class="form-control" asp-for="Title" />
+    <br />
+    <label>Açıklama</label>
+    <input type="text" class="form-control" asp-for="Description" />
+    <br />
+    <label>Resim</label>
+    <input type="text" class="form-control" asp-for="ImageURL" />
+    <br />
+    <button class="btn btn-info">Yeni Mülk Yayını Ekle</button>
+</form>
+

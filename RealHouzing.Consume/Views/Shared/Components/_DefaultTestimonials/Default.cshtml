@@ -1,0 +1,40 @@
+﻿@using RealHouzing.Consume.Models.TestimonialModels;
+@model List<TestimonialListViewModel>
+<section class="w3l-testimonials-main" id="testimonials">
+    <div class="container">
+        <div class="w3l-clients">
+            <div id="owl-demo1" class="owl-carousel owl-theme">
+                <div class="item">
+                    @foreach (var item in Model)
+                    {
+                    <div class="row no-gutters m-lg-0 test-w3hny-info">
+                        <div class="col-lg-5 w3l-left-img1">
+                        </div>
+                        
+                        <div class="col-lg-7 w3l-right-info">
+                            <div class="testimonial-content">
+                                <div class="testimonial">
+                                    <div class="testi-des">
+                                       
+                                        <div class="peopl align-self">
+                                            <h4>@item.NameSurname</h4>
+                                            <p class="indentity">@item.Title</p>
+                                        </div>
+                                    </div>
+                                    <blockquote>
+                                        <q><i class="fas fa-quote-left me-2"></i> @item.Comment</q>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                      
+                        
+                    </div>  
+                    }
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,37 @@
+﻿@using RealHouzing.Consume.Models.ProgressBarModels;
+@model List<ProgressBarListViewModel>
+<section class="w3l-servicesblock w3l-servicesblock1 py-5" id="progress">
+    <div class="container py-lg-5 py-md-4 py-2">
+        <div class="row">
+            <div class="col-lg-6 mb-lg-0 mb-5 pe-lg-5">
+                <h5 class="title-subw3hny mb-1">İlerleme Çubukları</h5>
+                @foreach (var item in Model)
+                {
+                   <h3 class="title-w3l">
+                    @item.Title
+                   </h3>
+              
+                
+                <p class="mt-md-4 mt-3">
+                    @item.Description
+                </p>
+                }
+
+            </div>
+            <div class="col-lg-6 align-self pe-lg-4">
+                @foreach (var item in Model)
+                {
+                <div class="progress-info info1">
+                    <h6 class="progress-tittle">@item.Name <span class="">@item.Value%</span></h6>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width:@item.Value%" aria-valuenow="@item.Value" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+                }
+
+            </div>
+
+        </div>
+    </div>
+</section>

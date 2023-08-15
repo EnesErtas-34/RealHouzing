@@ -1,0 +1,36 @@
+﻿@using RealHouzing.Consume.Models.ProductModels;
+@model List<ProductListViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <br /><br />
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Başlık</th>
+            <th>Fiyat</th>
+            <th>Tür</th>
+            <th>Kategori</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProductID</td>
+                <td>@item.ProductTitle</td>
+                <td>@item.ProductPrice</td>
+                <td>@item.ProductType</td>
+                <td>@item.CategoryID</td>
+                <td><a href="/Product/DeleteProduct/@item.ProductID" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Product/UpdateProduct/@item.ProductID" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+            
+        }
+    </table>
+    <a href="#" class="btn btn-primary">Yeni Emlak Girişi</a>
+</div>
+

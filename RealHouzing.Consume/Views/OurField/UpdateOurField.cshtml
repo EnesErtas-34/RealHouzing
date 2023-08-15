@@ -1,0 +1,24 @@
+﻿@using RealHouzing.Consume.Models.OurFieldModels;
+@model UpdateOurFieldViewModel
+@{
+    ViewData["Title"] = "UpdateOurField";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+
+    <form method="post">
+        <br /><br />
+        <label>OurField ID</label>
+        <input type="text" class="form-control" asp-for="OurFieldID" />
+        <br />
+        <label>Başlık</label>
+        <input type="text" class="form-control" asp-for="Title" />
+        <br />
+        <label>Resim</label>
+        <input type="text" class="form-control" asp-for="ImageURL" />
+        <br />
+        <button class="btn btn-info">Alanlarımızı Güncelle</button>
+    </form>
+</div>
+

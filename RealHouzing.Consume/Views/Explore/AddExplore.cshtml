@@ -1,0 +1,21 @@
+﻿@using RealHouzing.Consume.Models.ExploreModels;
+@model AddExploreViewModel
+@{
+    ViewData["Title"] = "AddExplore";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <br />
+    <label>Ad</label>
+    <input type="text" class="form-control" asp-for="ExploreName" />
+    <br />
+    <label>Resim</label>
+    <input type="text" class="form-control" asp-for="ImageURL" />
+    <br />
+    <label>Ikon</label>
+    <input type="text" class="form-control" asp-for="Icon" />
+    <br />
+    <button class="btn btn-info">Yeni Mülk Ekle</button>
+</form>
+

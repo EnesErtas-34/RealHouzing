@@ -1,0 +1,30 @@
+﻿@using RealHouzing.Consume.Models.CoLivingModels;
+@model UpdateCoLivingViewModel
+@{
+    ViewData["Title"] = "UpdateCoLiving";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+
+    <form method="post">
+        <br /><br />
+        <label>CoLiving ID</label>
+        <input type="text" class="form-control" asp-for="CoLivingID" />
+        <br />
+        <label>Resim1</label>
+        <input type="text" class="form-control" asp-for="ImageURL1" />
+        <br />
+        <label>Resim2</label>
+        <input type="text" class="form-control" asp-for="ImageURL2" />
+        <br />
+        <label>Başlık</label>
+        <input type="text" class="form-control" asp-for="Title" />
+        <br />
+        <label>Açıklama</label>
+        <input type="text" class="form-control" asp-for="Description" />
+        <br />
+        <button class="btn btn-info">Yaşam Alanını Güncelle</button>
+    </form>
+</div>
+

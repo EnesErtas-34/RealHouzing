@@ -1,0 +1,31 @@
+﻿@using RealHouzing.Consume.Models.AboutUsVideoModels;
+@model List<AboutUsVideoListViewModel>
+<section class="w3l-grids-3 py-5" id="about">
+    <div class="container py-md-5 py-3">
+        @foreach (var item in Model)
+        {
+            <div class="row bottom-ab-grids">
+                <div class="w3l-video-left col-lg-6" id="video">
+                 
+                    <div>
+                        <div class="position-relative mt-4">
+
+
+                            <div id="small-dialog" class="zoom-anim-dialog">
+                                <iframe width="560" height="315" src="@item.VideoURL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3ab-left-top col-lg-6 mt-lg-0 mt-5 ps-lg-5">
+                    <h6 class="title-subw3hny mb-1">Bir Ev Satın Alın</h6>
+                    <h3 class="title-w3l mb-2">@item.Title</h3>
+                    <p class="my-3"> @item.Description </p>
+
+                    <a href="about.html" class="btn btn-style btn-primary mt-4">Satılık evleri keşfedin <i class="fas fa-angle-double-right ms-2"></i></a>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+

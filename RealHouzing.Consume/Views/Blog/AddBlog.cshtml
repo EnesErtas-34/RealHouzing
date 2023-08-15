@@ -1,0 +1,31 @@
+﻿@using RealHouzing.Consume.Models.BlogModels;
+@model AddBlogViewModel
+@{
+    ViewData["Title"] = "AddBlog";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <br />
+    <label>Başlık</label>
+    <input type="text" class="form-control" asp-for="Title" />
+    <br />
+    <label>Yazar</label>
+    <input type="text" class="form-control" asp-for="Writer" />
+    <br />
+    <label>Yazar Resmi</label>
+    <input type="text" class="form-control" asp-for="WriterImage" />
+    <br />
+    <label>Blog Resmi</label>
+    <input type="text" class="form-control" asp-for="BlogImage" />
+    <br />
+    <label>Açıklama</label>
+    <input type="text" class="form-control" asp-for="Description" />
+    <br />
+    <label>Tarih</label>
+    <input type="text" class="form-control" asp-for="Date" />
+    <br />
+    <button class="btn btn-info">Yeni Blog Ekle</button>
+</form>
+
+

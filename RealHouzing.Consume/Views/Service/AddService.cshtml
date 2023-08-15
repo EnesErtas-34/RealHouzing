@@ -1,0 +1,24 @@
+﻿@using RealHouzing.Consume.Models.ServiceModels;
+@model AddServiceViewModel
+@{
+    ViewData["Title"] = "AddService";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <br />
+    <label>Başlık</label>
+    <input type="text" class="form-control" asp-for="Title" />
+    <br />
+    <label>Ikon</label>
+    <input type="text" class="form-control" asp-for="Icon" />
+    <br />
+    <label>Hizmet Adı</label>
+    <input type="text" class="form-control" asp-for="ServiceName" />
+    <br />
+    <label>Açıklama</label>
+    <input type="text" class="form-control" asp-for="Description" />
+    <br />
+    <button class="btn btn-info">Yeni Hizmet Alanı Ekle</button>
+</form>
+

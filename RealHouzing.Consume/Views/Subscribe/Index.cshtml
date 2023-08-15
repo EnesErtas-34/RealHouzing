@@ -1,0 +1,31 @@
+﻿@using RealHouzing.Consume.Models.SubscribeModels;
+@model List<SubscribeListViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Mail Adresi</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.SubscribeID</td>
+            <td>@item.Mail</td>
+            <td><a href="/Subscribe/DeleteSubscribe/@item.SubscribeID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Subscribe/UpdateSubscribe/@item.SubscribeID" class="btn btn-success">Güncelle</a></td>
+
+        </tr>
+    }
+</table>
+<br />
+
+

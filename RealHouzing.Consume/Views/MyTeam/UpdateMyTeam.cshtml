@@ -1,0 +1,36 @@
+﻿@using RealHouzing.Consume.Models.MyTeamModels;
+@model UpdateMyTeamViewModel
+@{
+    ViewData["Title"] = "UpdateMyTeam";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+
+    <form method="post">
+        <br /><br />
+        <label>MyTeam ID</label>
+        <input type="text" class="form-control" asp-for="MyTeamID" />
+        <br />
+        <label>Resim</label>
+        <input type="text" class="form-control" asp-for="ImageURL" />
+        <br />
+        <label>Ad Soyad</label>
+        <input type="text" class="form-control" asp-for="NameSurname" />
+        <br />
+        <label>İş</label>
+        <input type="text" class="form-control" asp-for="Job" />
+        <br />
+        <label>Facebook</label>
+        <input type="text" class="form-control" asp-for="Facebook" />
+        <br />
+        <label>Twitter</label>
+        <input type="text" class="form-control" asp-for="Twitter" />
+        <br />
+        <label>Linkedin</label>
+        <input type="text" class="form-control" asp-for="Linkedin" />
+        <br />
+        <button class="btn btn-info">Takım Güncelle</button>
+    </form>
+</div>
+
